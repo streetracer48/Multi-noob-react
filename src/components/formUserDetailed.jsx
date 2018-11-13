@@ -8,9 +8,19 @@ import RaisedButton from 'material-ui/RaisedButton'
 
 class FormUserDetailed extends Component {
 
+    continue = (e) => {
+        this.props.nextStep()
+    }
+
+
     render () {
+         const { values} = this.props;
          return (
-             <div>Hello form userdetails</div>
+             <MuiThemeProvider>
+                 <React.Fragment>
+                     <AppBar title="Enter User Detals"/>
+                 </React.Fragment>
+             </MuiThemeProvider>
          )
     }
 
